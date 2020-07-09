@@ -53,8 +53,8 @@ Things you may want to cover:
 |message|text||
 |image|text||
 |created_at|timestamp|
-|user_id|integer|null: false, foreign_ker: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_ker: true|
+|group|references|null: false, foreign_key: true|
 
 ## Association
 - belongs_to :user
@@ -65,8 +65,8 @@ Things you may want to cover:
 
 |column|type|option|
 |:------|:----|:------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ## Association
 - belongs_to :group
