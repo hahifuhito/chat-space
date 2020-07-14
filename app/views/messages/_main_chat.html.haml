@@ -1,0 +1,43 @@
+.MainChat
+  .MainChat__group
+    .top-items
+      .top-items__names
+        .group-name
+          test
+        .member-names
+          Menber : masa
+
+      = link_to "Edit", "#", class: "top-items__edit_group_btn" 
+      
+          
+        
+  .MainChat__messages
+    .main-space
+      .main-items
+        .main-items__create-at
+          .user-name
+            masa
+          .timestamp
+            2019/11/20(Wed)17:43:01
+        .main-items__message
+          おはよう！
+      .main-items
+        .main-items__create-at
+          .user-name
+            masa
+          .timestamp
+            2019/11/20(Wed)17:43:34
+        .main-items__message
+          今日は夜から雨
+
+
+  .MainChat__form
+    =form_with url: "#", class: "forms" do |form|
+      .bottom-items__forms
+        = form.text_field :message, placeholder: "type a message",class: "textarea"
+        %label{class: "input-box__image"}
+          =icon('fas','image')
+          %input{type: "file", class: "input-box__file"}
+
+            
+      = form.submit "Send", class:"Send-btn"
