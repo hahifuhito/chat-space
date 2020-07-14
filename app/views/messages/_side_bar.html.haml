@@ -1,0 +1,25 @@
+.SideBar
+  .SideBar__user
+    .top-items
+      .top-items__user-name
+        masa
+      .top-items__icons
+        = link_to "#", class: "icons__btn--make-group" do
+          =icon('far','edit', class: "icon edit-btn")
+          %span<>
+        =link_to "#", class: "icons__btn__edit-account" do
+          =icon('fas','cog', class: "icon cog-btn")
+          %span<>
+
+  .SideBar__groups
+    .main-items
+      .main-items__main-item
+        .main-item__group-name
+          techcamp
+        .main-item__new-message
+          まだメッセージがありません
+      .main-items__main-item
+        .main-item__group-name
+          techcamp
+        .main-item__new-message
+          まだメッセージがありません

@@ -1,0 +1,55 @@
+.SideBar{
+  width: 300px;
+  &__user{
+    background-color: #253141;
+    color: #ffffff;
+    height: 100px;
+    display:flex;
+    align-items: center;
+
+  }
+  .top-items{
+      width: 260px;
+      height: 20px;
+      margin: 0 20px;
+      display: flex;
+      justify-content:space-between;
+      &__user-name{
+        font-size: 16px;
+      }
+      &__icons{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        }
+  }
+  .icon{
+    color: #ffffff;
+  }
+  .edit-btn{
+    padding: 0 5px 0 0;
+  }
+  &__groups{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    color: #ffffff;
+    font-weight: bold;
+    &__main-items{
+      
+      &__main-item{
+        width: 260px;
+        margin: 0 20px;
+      }
+      
+    }
+  }
+  .main-item__group-name{
+    font-size: 15px;
+    padding: 20px 20px 5px 20px;
+  }
+  .main-item__new-message{
+    font-size: 11px;
+    padding: 0 20px 40px 20px;
+  }
+}      
+
