@@ -36,6 +36,10 @@
     font-size: 12px;
     padding-left: 40px;
     color: #999999;
+    display: flex;
+  }
+  .name{
+    padding-right:5px;
   }
   
 
@@ -78,7 +82,9 @@
     display: flex;
     justify-content: space-between;
   }
-  
+  .Form{
+    display: flex;
+  }
 
   .bottom-items__forms{
     width: 100%;
