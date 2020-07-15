@@ -3,41 +3,30 @@
     .top-items
       .top-items__names
         .group-name
-          test
+          =@group.name
         .member-names
-          Menber : masa
+          
+          Member：
+          
+          .name
+            - @group.group_users.each do |group_user|
+              = group_user.user.name
 
-      = link_to "Edit", "#", class: "top-items__edit_group_btn" 
+      = link_to "Edit", "edit", class: "top-items__edit_group_btn" 
       
           
         
   .MainChat__messages
-    .main-space
-      .main-items
-        .main-items__create-at
-          .user-name
-            masa
-          .timestamp
-            2019/11/20(Wed)17:43:01
-        .main-items__message
-          おはよう！
-      .main-items
-        .main-items__create-at
-          .user-name
-            masa
-          .timestamp
-            2019/11/20(Wed)17:43:34
-        .main-items__message
-          今日は夜から雨
+    = render @messages
 
 
   .MainChat__form
-    =form_with url: "#", class: "forms" do |form|
+    =form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .bottom-items__forms
-        = form.text_field :message, placeholder: "type a message",class: "textarea"
-        %label{class: "input-box__image"}
+        = f.text_field :message, placeholder: "type a message",class: "textarea"
+        = f.label :image, class: "input-box__image" do
           =icon('fas','image')
-          %input{type: "file", class: "input-box__file"}
+          =f.file_field :image, class: "input-box__file"
 
             
-      = form.submit "Send", class:"Send-btn"
+      = f.submit "Send", class:"Send-btn"

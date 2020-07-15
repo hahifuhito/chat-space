@@ -34,23 +34,21 @@
     height: calc(100vh - 100px);
     color: #ffffff;
     font-weight: bold;
-    &__main-items{
+    padding: 0 20px;
+  }
       
-      &__main-item{
-        width: 260px;
-        margin: 0 20px;
-        color: #ffffff;
-      }
       
-    }
+  .main-item{
+    padding: 20px 0 40px;
   }
   .main-item__group-name{
     font-size: 15px;
-    padding: 20px 20px 5px 20px;
+    color: #ffffff;
   }
   .main-item__new-message{
     font-size: 11px;
-    padding: 0 20px 40px 20px;
+    margin: 5px 0 0;
+    color: #ffffff;
   }
 }      
 
