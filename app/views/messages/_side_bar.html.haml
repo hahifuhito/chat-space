@@ -4,7 +4,7 @@
       .top-items__user-name
         = current_user.name
       .top-items__icons
-        = link_to "#", class: "icons__btn--make-group" do
+        = link_to new_group_path(current_user), class: "icons__btn--make-group" do
           =icon('far','edit', class: "icon edit-btn")
           %span<>
         =link_to edit_user_path(current_user), class: "icons__btn__edit-account" do
@@ -12,14 +12,11 @@
           %span<>
 
   .SideBar__groups
-    .main-items
-      .main-items__main-item
-        .main-item__group-name
-          techcamp
-        .main-item__new-message
-          まだメッセージがありません
-      .main-items__main-item
-        .main-item__group-name
-          techcamp
-        .main-item__new-message
-          まだメッセージがありません
+    - current_user.groups.each do |group|
+      .main-item
+        = link_to '#' do
+          .main-item__group-name
+            = group.name
+          .main-item__new-message
+            まだメッセージがありません
+      
