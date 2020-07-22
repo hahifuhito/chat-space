@@ -46,9 +46,12 @@
   &__messages{
     background-color: #fafafa;
     height: calc(100vh - 190px);
+    padding: 35px 40px 0;
+    overflow: scroll;
+  
   }
   .main-space{
-    padding: 35px 40px 0;  
+    padding: 0 0 35px;  
   }
   .main-items{
     padding-bottom: 46px;
@@ -120,5 +123,4 @@
     border: none;
 
   }
-  
 }
